@@ -1,11 +1,9 @@
-package com.dph.request.aggregator.lib.support.park;
+package com.dph.request.aggregator.lib.flow.synchronizer;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import com.dph.request.aggregator.lib.interfaces.RequestAggregatorThreadParkAlgorithm;
-
-public class RequestAggregatorThreadParkCountDownLatchAlgorithm implements RequestAggregatorThreadParkAlgorithm {
+public class AggregatorSynchronizerImpl implements AggregatorSynchronizer {
 
     private int amountAttempts;
 
@@ -15,10 +13,7 @@ public class RequestAggregatorThreadParkCountDownLatchAlgorithm implements Reque
 
     private CountDownLatch countDownLatch;
 
-    public RequestAggregatorThreadParkCountDownLatchAlgorithm(long timeout,
-                                                              TimeUnit timeUnit,
-                                                              int amountAttempts,
-                                                              CountDownLatch countDownLatch) {
+    public AggregatorSynchronizerImpl(long timeout, TimeUnit timeUnit, int amountAttempts, CountDownLatch countDownLatch) {
         this.timeout = timeout;
         this.timeUnit = timeUnit;
         this.amountAttempts = amountAttempts;

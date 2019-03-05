@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Import;
 import com.dph.request.aggregator.lib.configuration.AggregatorConfiguration;
 import com.dph.blocked.service.BlockedService;
 import com.dph.blocked.service.dto.Response;
-import com.dph.request.aggregator.lib.support.RequestAggregatorSupport;
 import org.springframework.web.client.RestTemplate;
 
 @Import(AggregatorConfiguration.class)

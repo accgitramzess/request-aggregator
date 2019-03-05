@@ -5,8 +5,6 @@ import org.springframework.web.client.RestTemplate;
 import com.dph.blocked.service.dto.Request;
 import com.dph.blocked.service.dto.Response;
 
-import com.dph.request.aggregator.lib.support.RequestAggregatorSupport;
-
 public class BlockedService {
 
     private String url;
