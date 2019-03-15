@@ -1,6 +1,6 @@
 package com.dph.request.aggregator.lib.flow.request;
 
-public interface AggregateRequestFlowOperation {
+public interface AggregateRequestFlowOperation<K, V> {
 
-    void process(AggregateRequestFlowOperationContext context);
+    void process(AggregateRequestFlowOperationContext<K, V> context);
 }

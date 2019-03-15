@@ -2,11 +2,15 @@ package com.dph.request.aggregator.lib.flow.callback;
 
 import org.springframework.http.HttpEntity;
 
-public class AggregatorCallbackFlow {
+import com.dph.request.aggregator.lib.flow.main.AggregatorContext;
 
-    private AggregatorCallbackFlowOperation aggregatorCallbackFlowOperation;
+public class AggregatorCallbackFlow<K, V> {
 
-    public AggregatorCallbackFlow(AggregatorCallbackFlowOperation aggregatorCallbackFlowOperation) {
+    private AggregatorContext<K, V> contextFlow;
+
+    private AggregatorCallbackFlowDataMapper aggregatorCallbackFlowOperation;
+
+    public AggregatorCallbackFlow(AggregatorCallbackFlowDataMapper aggregatorCallbackFlowOperation) {
         this.aggregatorCallbackFlowOperation = aggregatorCallbackFlowOperation;
     }
 
